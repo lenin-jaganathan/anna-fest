@@ -1,0 +1,33 @@
+(function () {
+    var express = require('express');
+    var router =express.Router();
+    var commonController = require('../controllers/commonController');
+    var activityController = require('../controllers/activityController');
+
+    router.post('/register',function (req,res) {
+        commonController.register(req,res);
+    });
+
+    router.post('/login',function (req, res) {
+        commonController.login(req,res);
+    });
+
+    router.post('/confirmlogin',function (req, res) {
+        commonController.submitOtp(req,res);
+    });
+
+    router.post('/logout',function (req, res) {
+       commonController.logout(req,res);
+    });
+
+    router.get('/admin/getUsers' ,function (req, res) {
+       // console.log("Admin url");
+        activityController.getUsers(req,res);
+    });
+
+    router.post('/admin/viewSport',function (req, res) {
+        activityController.viewSport(req,res);
+    });
+
+    module.exports = router;
+})();
