@@ -8,8 +8,8 @@
         mailJson.text = 'Enter the otp to confirm registration.. '+msg;
         console.log('sending mail');
         mailer.sendMail(mailJson,function (err, data) {
-            console.log(data);
-            console.log(err);
+           // console.log(data);
+            //console.log(err);
             callback(err,data);
         })
     }

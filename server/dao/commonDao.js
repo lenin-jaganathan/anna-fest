@@ -102,6 +102,7 @@
         try {
             var query = 'select email,password,verified from users where email = ?';
             connection.query(query, [param.email], function (err, data) {
+                //console.log(data);
                 callback(err, data);
             })
         }

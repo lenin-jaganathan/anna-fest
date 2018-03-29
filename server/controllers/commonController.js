@@ -145,7 +145,7 @@
                         responseHandler.error(res,err);
                     }
                     else{
-                        // console.log(1);
+                        //console.log(data);
                         if(data.length === 1) {
                             if (data[0].verified !== 0) {
                                 //console.log(data[0].verified);
@@ -157,11 +157,14 @@
                                     data.sessionID = sessionID;
                                     data.token = token;
                                     data.expiry = (moment(moment.now()).add(12, 'hours')) * 1;
+                                    //console.log(data);
                                     commonServices.entersession(data, function (err, data) {
                                         if (err) {
+                                            console.log(err);
                                             responseHandler.error(res, err);
                                         }
                                         else {
+
                                             var dat = {};
                                             dat.sessionID = sessionID;
                                             dat.token = token;
@@ -212,7 +215,7 @@
         try{
             var sessionId = req.headers['sessionid'];
             var token = req.headers['token'];
-            console.log(sessionId);
+            //console.log(sessionId);
             if(token && sessionId){
                 commonServices.checksession(sessionId,function (err, data) {
                     if(err){
@@ -267,6 +270,7 @@
         try{
             if(req.body) {
                 var param = req.body.otp;
+                console.log(param);
                 commonServices.beginTransaction(function (err) {
                     if(err){
                         responseHandler.error(res,err);
@@ -281,14 +285,16 @@
                                 if(data.length === 0) {
                                     var error = {};
                                     error.statusCode = 401;
-                                    error.message = "User does not exists.Please signup";
+                                    error.message = "Either signup or login to continue";
                                     transactionHandler.rollBackHandler(res,error);
                                 }
                                 else
                                 {
+                                    //console.log(data[0].otp);
+                                    //console.log(param.otp);
                                     //console.log(data);
                                     // if(data[0].verified === 0) {
-                                    if(data[0].otp = param.otp){
+                                    if(data[0].otp === param.otp){
                                         //console.log(param.email);
                                         commonServices.login(param,function (err,data) {
                                             if(err){

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de21936b-6a59-4729-bec3-ccb7ec377fd7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/activityController.js" afterPath="$PROJECT_DIR$/server/controllers/activityController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/commonController.js" afterPath="$PROJECT_DIR$/server/controllers/commonController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/dao/commonDao.js" afterPath="$PROJECT_DIR$/server/dao/commonDao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/routes" afterPath="$PROJECT_DIR$/server/routes/routes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/sendMail.js" afterPath="$PROJECT_DIR$/server/services/sendMail.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/server/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+              <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -32,18 +35,8 @@
       <file leaf-file-name="routes" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/routes">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activityController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/controllers/activityController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            <state relative-caret-position="187">
+              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -53,7 +46,17 @@
         <entry file="file://$PROJECT_DIR$/server/routes/activitiesRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+              <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activityController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/controllers/activityController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="88" column="14" lean-forward="false" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -69,36 +72,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/config/config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="commonController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/controllers/commonController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            <state relative-caret-position="54">
+              <caret line="217" column="14" lean-forward="false" selection-start-line="217" selection-start-column="14" selection-end-line="217" selection-end-column="14" />
               <folding>
                 <element signature="e#567#8609#0" expanded="false" />
-                <element signature="e#8659#12054#0" expanded="false" />
-                <element signature="e#12105#14375#0" expanded="false" />
-                <element signature="e#14429#18637#0" expanded="false" />
+                <element signature="e#8659#12176#0" expanded="false" />
+                <element signature="e#14553#18925#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authHandler.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/middlewares/authHandler.js">
+      <file leaf-file-name="transactionHandler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/helpers/transactionHandler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            <state relative-caret-position="289">
+              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sendMail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/services/sendMail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -107,8 +109,8 @@
       <file leaf-file-name="commonServices.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/services/commonServices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+            <state relative-caret-position="148">
+              <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -117,8 +119,8 @@
       <file leaf-file-name="commonDao.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/dao/commonDao.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="50" column="77" lean-forward="false" selection-start-line="50" selection-start-column="77" selection-end-line="50" selection-end-column="77" />
+            <state relative-caret-position="122">
+              <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -136,6 +138,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>users</find>
+      <find>console</find>
+      <find>login</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,16 +156,16 @@
         <option value="$PROJECT_DIR$/server/index.js" />
         <option value="$PROJECT_DIR$/server/middlewares/authHandler.js" />
         <option value="$PROJECT_DIR$/server/routes/activitiesRoutes.js" />
-        <option value="$PROJECT_DIR$/server/controllers/activityController.js" />
         <option value="$PROJECT_DIR$/server/config/mail.js" />
-        <option value="$PROJECT_DIR$/server/helpers/transactionHandler.js" />
-        <option value="$PROJECT_DIR$/server/services/sendMail.js" />
-        <option value="$PROJECT_DIR$/server/routes/routes" />
         <option value="$PROJECT_DIR$/server/services/commonServices.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/entry.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/server/helpers/transactionHandler.js" />
+        <option value="$PROJECT_DIR$/server/services/sendMail.js" />
         <option value="$PROJECT_DIR$/server/dao/commonDao.js" />
+        <option value="$PROJECT_DIR$/server/controllers/activityController.js" />
+        <option value="$PROJECT_DIR$/server/routes/routes" />
         <option value="$PROJECT_DIR$/server/controllers/commonController.js" />
       </list>
     </option>
@@ -441,12 +445,12 @@
       <workItem from="1521778427735" duration="1497000" />
       <workItem from="1521909724070" duration="2912000" />
       <workItem from="1522092745847" duration="967000" />
-      <workItem from="1522309164650" duration="3337000" />
+      <workItem from="1522309164650" duration="7345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71056000" />
+    <option name="totallyTimeSpent" value="75064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="733" extended-state="0" />
@@ -549,9 +553,8 @@
           <caret line="283" column="71" lean-forward="false" selection-start-line="283" selection-start-column="71" selection-end-line="283" selection-end-column="71" />
           <folding>
             <element signature="e#567#8609#0" expanded="false" />
-            <element signature="e#8659#12054#0" expanded="false" />
-            <element signature="e#12105#14375#0" expanded="false" />
-            <element signature="e#14429#18637#0" expanded="false" />
+            <element signature="e#8659#12176#0" expanded="false" />
+            <element signature="e#14553#18925#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -630,9 +633,8 @@
           <caret line="283" column="71" lean-forward="false" selection-start-line="283" selection-start-column="71" selection-end-line="283" selection-end-column="71" />
           <folding>
             <element signature="e#567#8609#0" expanded="false" />
-            <element signature="e#8659#12054#0" expanded="false" />
-            <element signature="e#12105#14375#0" expanded="false" />
-            <element signature="e#14429#18637#0" expanded="false" />
+            <element signature="e#8659#12176#0" expanded="false" />
+            <element signature="e#14553#18925#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -672,9 +674,8 @@
           <caret line="63" column="52" lean-forward="false" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
           <folding>
             <element signature="e#567#8609#0" expanded="false" />
-            <element signature="e#8659#12054#0" expanded="false" />
-            <element signature="e#12105#14375#0" expanded="false" />
-            <element signature="e#14429#18637#0" expanded="false" />
+            <element signature="e#8659#12176#0" expanded="false" />
+            <element signature="e#14553#18925#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -768,25 +769,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/helpers/transactionHandler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/config/mail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/services/sendMail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,22 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/activitiesRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/activityController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/middlewares/authHandler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
@@ -846,47 +816,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
+    <entry file="file://$PROJECT_DIR$/server/services/sendMail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/routes/routes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        <state relative-caret-position="187">
+          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/services/commonServices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+        <state relative-caret-position="148">
+          <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/dao/commonDao.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/activitiesRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/activityController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="88" column="14" lean-forward="false" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/helpers/transactionHandler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="50" column="77" lean-forward="false" selection-start-line="50" selection-start-column="77" selection-end-line="50" selection-end-column="77" />
+          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/routes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/controllers/commonController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        <state relative-caret-position="54">
+          <caret line="217" column="14" lean-forward="false" selection-start-line="217" selection-start-column="14" selection-end-line="217" selection-end-column="14" />
           <folding>
             <element signature="e#567#8609#0" expanded="false" />
-            <element signature="e#8659#12054#0" expanded="false" />
-            <element signature="e#12105#14375#0" expanded="false" />
-            <element signature="e#14429#18637#0" expanded="false" />
+            <element signature="e#8659#12176#0" expanded="false" />
+            <element signature="e#14553#18925#0" expanded="false" />
           </folding>
         </state>
       </provider>

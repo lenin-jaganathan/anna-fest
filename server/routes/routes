@@ -12,7 +12,7 @@
         commonController.login(req,res);
     });
 
-    router.post('/confirmlogin',function (req, res) {
+    router.post('/confirmsignup',function (req, res) {
         commonController.submitOtp(req,res);
     });
 

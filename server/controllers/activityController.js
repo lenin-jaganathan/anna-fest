@@ -10,6 +10,7 @@
             var param = {};
             param.email = email;
             param.sportId =  sportId;
+            //console.log(email);
             //console.log(sportId);
             if(sportId) {
                 commonServices.checkAvailability(sportId,function (err, data) {
@@ -30,6 +31,7 @@
                                 if(data.length === 0){
                                     commonServices.registerSport(param,function (err, data) {
                                         if(err){
+                                            err.statusCode = 408;
                                             responseHandler.error(res,err);
                                         }
                                         else{
@@ -85,24 +87,31 @@
         try {
             var param = req.body.sportId;
             //console.log(param);
-            commonServices.viewSport(param,function (err, data) {
-                if(err){
-                    responseHandler.error(res,err);
-                }
-                else{
-                    if(data.length === 0){
-                        var err = {};
-                        err.statusCode = 401;
-                        err.message = 'No users registered for selected sport.';
-                        responseHandler.error(res,err);
+            if (param) {
+                commonServices.viewSport(param, function (err, data) {
+                    if (err) {
+                        responseHandler.error(res, err);
                     }
                     else {
-                        responseHandler.response(res, data);
+                        if (data.length === 0) {
+                            var err = {};
+                            err.statusCode = 401;
+                            err.message = 'No users registered for selected sport.';
+                            responseHandler.error(res, err);
+                        }
+                        else {
+                            responseHandler.response(res, data);
+                        }
                     }
-                }
-            })
+                })
+            }
+            else {
+                responseHandler.error(res, err);
+            }
         }
         catch (err){
+            err.statusCode = 401;
+            err.message = "Empty data";
             responseHandler.error(res,err);
         }
     }
