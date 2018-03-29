@@ -32,11 +32,11 @@
 
     module.exports.checkOtp = function (param, callback) {
         try {
-            console.log(param);
+            //console.log(param);
             var query = 'select * from  verification where email = "'+param+'";';
             // console.log(param.phone);
             connection.query(query, function (err, data) {
-                console.log(data);
+                //console.log(data);
                 callback(err, data);
             });
         }
@@ -48,9 +48,9 @@
 
     module.exports.deleteOtp = function (param, callback) {
         try {
-            var query = 'delete  from  verification where email ='+param+';';
+            var query = 'delete  from  verification where email = "'+param+'";';
             // console.log(param.phone);
-            connection.query(query, param, function (err, data) {
+            connection.query(query, function (err, data) {
                 callback(err, data);
             });
         }
@@ -95,6 +95,8 @@
             callback(err);
         }
     };
+
+
 
     module.exports.login = function (param, callback) {
         try {

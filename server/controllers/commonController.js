@@ -44,7 +44,7 @@
                                                 else{
                                                     console.log(data.length);
                                                     if(data.length > 0){
-                                                        console.log(2);
+                                                        //console.log(2);
                                                         commonServices.deleteOtp(email,function (err, data) {
                                                             if (err) {
                                                                 transactionHandler.rollBackHandler(res, err);
@@ -53,14 +53,14 @@
                                                                 var para = {};
                                                                 para.otp = randnumber.generate(8);
                                                                 para.email = param.email;
-                                                                para.expiry = (moment(moment.now()).add(30,'minutes'))*1;
-                                                                console.log(2);
+                                                                para.expiry = (moment(moment.now()).add(300,'minutes'))*1;
+                                                                //console.log(2);
                                                                 commonServices.enterOtp(param,function (err,data) {
                                                                     if(err){
                                                                         transactionHandler.rollBackHandler(res,err);
                                                                     }
                                                                     else{
-                                                                        console.log(3);
+                                                                        //console.log(3);
                                                                         mailService.sendVerification(mail, otp, function (err, data) {
                                                                             if (err) {
                                                                                 var err = {};
@@ -272,6 +272,7 @@
                         responseHandler.error(res,err);
                     }
                     else{
+                        //console.log(param.email);
                         commonServices.checkOtp(param.email,function (err, data) {
                             if(err){
                                 transactionHandler.rollBackHandler(res,err)
@@ -285,32 +286,46 @@
                                 }
                                 else
                                 {
-                                    if(data[0].verified === 0) {
-                                          if(data[0].otp = param.otp){
-                                              commonServices.updatestatus(param.email,function (err, data) {
-                                                 if(err){
-                                                     responseHandler.error(res,err);
-                                                 }
-                                                 else{
-                                                     responseHandler.response(res,data);
-                                                 }
-                                              });
-
-
-                                          }
-                                          else{
-                                              var error = {};
-                                              error.statusCode = 404;
-                                              error.message = "Invalid otp.";
-                                              transactionHandler.rollBackHandler(res,error);
-                                              transactionHandler.rollBackHandler(res,error);
-                                          }
+                                    //console.log(data);
+                                    // if(data[0].verified === 0) {
+                                    if(data[0].otp = param.otp){
+                                        //console.log(param.email);
+                                        commonServices.login(param,function (err,data) {
+                                            if(err){
+                                                transactionHandler.rollBackHandler(res,err);
+                                            }
+                                            else{
+                                                console.log(data);
+                                                if(data[0].verified === 0) {
+                                                    commonServices.updatestatus(param.email, function (err, data) {
+                                                        if (err) {
+                                                            transactionHandler.rollBackHandler(res,err);
+                                                        }
+                                                        else {
+                                                            commonServices.deleteOtp(param.email,function (err, data) {
+                                                                if(err){
+                                                                   transactionHandler.rollBackHandler(re,err);
+                                                                }
+                                                                else{
+                                                                   transactionHandler.commitHandler(res,data);
+                                                                }
+                                                            })
+                                                        }
+                                                    });
+                                                }
+                                                else{
+                                                    var error = {};
+                                                    error.statusCode = 405;
+                                                    error.message = "User alredy verified.Login to continue.";
+                                                    transactionHandler.rollBackHandler(res,error);
+                                                }
+                                            }
+                                        });
                                     }
-                                    else {
+                                    else{
                                         var error = {};
-                                        error.statusCode = 405;
-                                        error.message = "User alredy verified.Login to continue.";
-                                        transactionHandler.rollBackHandler(res,error);
+                                        error.statusCode = 404;
+                                        error.message = "Invalid otp.";
                                         transactionHandler.rollBackHandler(res,error);
                                     }
                                 }

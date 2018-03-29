@@ -4,9 +4,9 @@
 
     module.exports.commitHandler = function (res,data) {
         try{
-            console.log('inside commit');
+            //console.log('inside commit');
             commonService.commit(function (commiterr) {
-                console.log('inside commit err');
+                //console.log('inside commit err');
                 if(commiterr){
 
                     commonService.rollback(function (rollerr) {
